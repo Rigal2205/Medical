@@ -33,12 +33,23 @@ Website Features:
 
 <======>Technologies used to make the website <=====>
 
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
+=> Frontend:
+
+1. Reactjs
+2. aos
+3. bootstrap
+4. react-icons
+5. CSS
+
+=> Back-end:
+
+1. Firebase
+2. MongoDB
+
+===> Libraries which are used in MusicMingle <===
+
+1. axios
+2. mongoose
+3. nodemon
+4. express
+5. cors
