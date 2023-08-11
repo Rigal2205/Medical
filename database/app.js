@@ -38,32 +38,30 @@ app.get('/product/get',(req,res)=>{
   })
 })
 
-
-app.post('/Register',async (req,res)=>{
-  const {username,password}=req.body
+app.post("/Register", async (req, res) => {
+  const { username,password } = req.body;
   const HashPassword=await bcrypt.hash(password,12)
-  const User=new user({
+  const User = new user({
     username,
-        password:HashPassword
-    })
-    const uname=await user.findOne({username});
+    password:HashPassword,
+  });
+  const uname = await user.findOne({ username });
+  if (!uname) {
+    User.save()
+      .then(() => {
+        res.json({success: true, message: 'User Registered Successfully'})
+        console.log("User Added");
+      })
+      .catch((e) => {
+        console.log("Error adding a user", e);
+      });
+  } else {
+    res.json({success: false, message: 'User Already Registered!!'})
+    console.log("user already exists.");
+  }
+});
 
-     if(!uname)
-    {
-                 
-      User.save().then(()=>{
-                      console.log('user added ')
-                      return res.status(200).json({msg:'user added'}) 
-                  }).catch((e)=>{
-                      console.log('Error adding a user ',e)
-                      return res.status(400).json({msg:'Error adding a user'}) 
-                  }) 
-    }
-    else{
-        console.log("user already exists")
-        return res.status(501).json({msg:"User already exists"})
-} 
-})
+
 
 app.post('/Address',async(req,res)=>{
   const {fname,lname,city,pin,address,email}=req.body;

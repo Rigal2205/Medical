@@ -4,7 +4,6 @@ import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import Home from './Components/Home'
 import Registration from "./Components/Registration";
-import Addmed from "./Components/Addmed";
 import Name from "./Components/Name"
 import Alert from "./Components/Alert";
 
@@ -47,8 +46,6 @@ function App() {
       <Route path="/Babycare" element={<Home cart={cart} handlecart={handlecart} category={"babycare"}/>}/>
       <Route path="/Womencare" element={<Home cart={cart} handlecart={handlecart} category={"womencare"}/>}/>
       <Route path="/Ayurveda" element={<Home cart={cart} handlecart={handlecart} category={"ayurveda"}/>}/>
-      {/* <Route path="/order" element={<Order cart={cart}/>}/> */}
-      <Route path="/Addmed" element={<Addmed/>}/>
     </Routes>
     </>
   );

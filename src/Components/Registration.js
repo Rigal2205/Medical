@@ -24,52 +24,26 @@ const Registration=()=> {
     
     setuser({...user,[name]:value})
     }
-    
-    
-    // const handleSubmit=async(e)=>{
-    //     e.preventDefault()
-        
-    //       const res =await axios.post('http://localhost:3002/Register',user)
-    //         .then(res=>console.log(res))
-    //         setuser({
-    //         username:'',
-    //         password:''
-            
-    //     })     
 
-    //     if(res.status===501){
-    //       alert("User Already Exist"+res.data.msg)
-    //     }
-    //     else{
-    //       navigate('/Login')
-    //     }
-
-    // }
-
-    // const handlelogin=()=>{
-    //   navigate('/Login')
-    // }
-
-    const handleSubmit=async(e)=>{
-      e.preventDefault()
-      
-        const res =await axios.post('http://localhost:3002/Register',user)
-      //     setuser({
-      //     username:'',
-      //     password:''
-          
-      // })     
-
-      if(res.status===501){
-        alert("User Already Exist"+res.data.msg)
-      }
-      else{
-        alert("Registered Successfully")
-        navigate('/Login')
-      }
-
-  }
-
+    const handleSubmit = (e) => {
+      e.preventDefault();
+  
+      axios
+        .post("http://localhost:3002/Register", user)
+        .then(res =>{
+          if(res.data.success){
+            alert("Successfully registered")
+            setuser({
+              username: "",
+              password: ""
+            });
+            navigate('/Login')
+          }else{
+            alert("User already exists!!Please login")
+          }
+          console.log(res)
+        })
+      }
   
     return(
       <>
@@ -94,14 +68,6 @@ const Registration=()=> {
                   </div>
                 </div>
 
-                {/* <div className="d-flex flex-row align-items-center mb-4">
-                  <i className="fas fa-envelope fa-lg me-3 fa-fw mb-4"></i>
-                  <div className="form-outline flex-fill mb-0">
-                    <input type="email" id="form3Example3c" className="form-control" />
-                    <label className="form-label" for="form3Example3c">Your Email</label>
-                  </div>
-                </div> */}
-
                 <div className="d-flex flex-row align-items-center mb-4">
                   <i className="fas fa-lock fa-lg me-3 fa-fw mb-4"></i>
                   <div className="form-outline flex-fill mb-0">
@@ -110,30 +76,6 @@ const Registration=()=> {
                   </div>
                 </div>
 
-                {/* <div className="d-flex flex-row align-items-center mb-4">
-                  <i className="fas fa-key fa-lg me-3 fa-fw"></i>
-                  <div className="form-outline flex-fill mb-0">
-                    <input type="password" id="form3Example4cd" className="form-control" />
-                    <label className="form-label" for="form3Example4cd">Repeat your password</label>
-                  </div>
-                </div> */}
-
-                <div className="form-check d-flex justify-content-center mb-5">
-                  <input className="form-check-input me-2" type="checkbox" value="" id="form2Example3c" required/>
-                  <label className="form-check-label" for="form2Example3">
-                    I agree all statements in <a href="#!">Terms of service</a>
-                  </label>
-                </div>
-
-                
-                {/* <div className="d-flex justify-content-center">
-                  <div className="mx-3 my-2 my-sm-2">
-                  <button type="button" className="btn btn-primary btn-lg" style={{backgroundColor:"lightblue", color:"black"}} id="submit" onClick={handleSubmit}>Register</button>
-                  </div>
-                  <div className="mx-3 my-2">
-                  <button type="button" className="btn btn-primary btn-lg" style={{backgroundColor:"lightblue", color:"black"}} id="login" onClick={handlelogin}>Login</button>
-                  </div>
-                </div> */}
                 <div className="text-center text-lg-start mt-4 pt-2">
             <button type="button" className="btn btn-primary btn-lg"
               style={{paddingleft: "2.5rem", paddingright: "2.5rem",backgroundColor:"lightblue", color:"black"}} onClick={handleSubmit}>Register</button>
