@@ -1,0 +1,44 @@
+Website Features:
+
+=> Login Page: Login to the website to buy the medicines and other essentials.
+
+
+=> Registration Page: Register yourself to the website.
+
+
+=> Main Page: User can see all medicines & health related products on this page which are of general category.
+
+
+=> Navbar: Navbar contains different categories such as Health, Ayurveda, Personalcare, Womencare,Babycare..
+           Also, It contains Profile Icon and Logout Icon.
+
+
+=> Searchbar: User can search specific medicines.
+
+=> Add To Cart: After clicking on add to cart for particular product it will be stored and deplayed when clicked on cart icon.
+
+=> Quantity: We can increase or decrease product quantity by + and - buttons
+
+=> Total Price: Total amount wil be displayed with cart items.
+
+=> Address: We have to enter address for the delivery of products.
+
+=> Logout: Logout from the website.
+
+=> Profile: user profile is added but not connected with backend so it will not give details of user.
+
+=> User can get data of specific category by clicking on that category.
+
+
+
+<======>Technologies used to make the website <=====>
+
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
