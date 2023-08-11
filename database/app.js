@@ -141,48 +141,6 @@ app.get('/Resaddmed',async(req,res)=>{
   res.json(alluser)
 })
 
-// app.get('/Resaddmed',async(req,res)=>{
-//         const sdata=new adata({
-//                 aname,
-//         aprice,
-//         adescription,
-//         aurl
-//     })
-
-//     try{
-//             const allUser=await sdata.find();
-//             // res.send({status:"ok",rdata: allUser}); 
-//             res.json(allUser);
-//         } catch(error){
-//                 console.log(error);
-//             }
-//         })
-        
-    // app.get('/Resaddmed',(req,res)=>{
-    //     adata.find({}).then((data)=>{
-    //         console.log(data);
-    //         res.send({status: 200,data: data})
-    //         if(res.status==200){
-    //             console.log("data send")
-    //         }
-    //         else{
-    //             console.log("Not send")
-    //         }
-            
-    //     }).catch((e)=>{
-    //         console.log(e)
-    //         res.send(err)
-    //     })
-
-    // })    
-
-    // adata.find({}).then((data)=>{
-    //             console.log(data);
-                
-    // }).catch((e)=>{
-    //             console.log(e)
-               
-    //         })
 
     const data = [
       {
