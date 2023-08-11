@@ -1,0 +1,50 @@
+.item1{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 8px;
+    margin-bottom: 45px;
+    padding: 10px;
+    box-shadow: 5px 5px 15px 1px grey;
+    height: 550px;
+}
+
+.item1 img{
+    height: 300px;
+}
+
+.item1 btn{
+    border-radius: 0px;
+}
+
+.search{
+    position: relative;
+    left: 30%;
+    width: 40%;
+}
+
+.cartrow{
+    display: flex;
+    padding: 0px 0px 10px 15px;
+}
+
+.cartrow img{
+    width: 90px;
+    height: 90px;
+}
+
+.cartrow span{
+    padding: 32px 10px 0px 10px;
+}
+
+span{
+    justify-content: center;
+}
+
+th{
+    justify-content: center;
+}
+
+/* .cartrow span,button{
+    position: relative;
+    left: 45px;
+} */
